@@ -1,0 +1,27 @@
+@model IEnumerable<_2024_PC2.Models.CuentaBancaria>
+
+<h2>Lista de Cuentas Bancarias</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Número de Cuenta</th>
+            <th>Saldo</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cuenta in Model)
+        {
+            <tr>
+                <td>@cuenta.Nombre</td>
+                <td>@cuenta.NumeroCuenta</td>
+                <td>@cuenta.Saldo</td>
+                <td>@cuenta.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-primary" href="@Url.Action("Registro", "CuentasBancarias")">Registrar Nueva Cuenta</a>

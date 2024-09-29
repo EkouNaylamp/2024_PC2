@@ -1,0 +1,25 @@
+@model _2024_PC2.Models.CuentaBancaria
+
+<h2>Registrar Cuenta Bancaria</h2>
+
+<form asp-action="Registro" method="post">
+    <div class="form-group">
+        <label for="Nombre">Nombre</label>
+        <input type="text" class="form-control" asp-for="Nombre" />
+    </div>
+    <div class="form-group">
+        <label for="NumeroCuenta">Número de Cuenta</label>
+        <input type="text" class="form-control" asp-for="NumeroCuenta" />
+    </div>
+    <div class="form-group">
+        <label for="Saldo">Saldo</label>
+        <input type="number" class="form-control" asp-for="Saldo" />
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" asp-for="Email" />
+    </div>
+    <button type="submit" class="btn btn-primary">Registrar</button>
+</form>
+
+<a class="btn btn-secondary" href="@Url.Action("Listar", "CuentasBancarias")">Volver a la lista</a>
